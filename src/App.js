@@ -20,8 +20,8 @@ function App() {
 
   return (
     <div>
-      <NewExpense onAddExpense={ addExpenseHandler }></NewExpense>
-      <Expenses items={ expenses }></Expenses>
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
+      <Expenses items={expenses}></Expenses>
     </div>
   );
 }

@@ -13,12 +13,12 @@ const ExpenseItem = (props) => {
   return (
     <li>
       <Card className='expense-item'>
-        <ExpenseDate date={ props.expense.date }></ExpenseDate>
+        <ExpenseDate date={props.expense.date}></ExpenseDate>
         <div className='expense-item__description'>
-          <h2>{ props.expense.title }</h2>
-          <div className='expense-item__price'>${ props.expense.amount }</div>
+          <h2>{props.expense.title}</h2>
+          <div className='expense-item__price'>${props.expense.amount}</div>
         </div>
-        <button onClick={ clickHandler }>{ title }</button>
+        <button onClick={clickHandler}>{title}</button>
       </Card>
     </li>
   );
