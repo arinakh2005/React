@@ -1,0 +1,9 @@
+The Reducer Function:
+- Should be a pure function
+-> (Inputs) Old State + Dispatched Action
+<- (Output) New State Object
+
+install 2 packages:
+npm i redux react-redux
+
+npm i @reduxjs/toolkit
