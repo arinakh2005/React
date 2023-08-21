@@ -1,8 +1,8 @@
-import { json, useLoaderData } from 'react-router-dom';
+import { json, useRouteLoaderData } from 'react-router-dom';
 import EventItem from '../../components/EventItem';
 
 const EventDetailPage = (param) => {
-  const data = useLoaderData();
+  const data = useRouteLoaderData('event-detail');
 
   return (
     <>
@@ -20,8 +20,8 @@ export async function loader({ request, params }) {
   if (!response.ok) {
     throw json(
       { message: 'Could not fetch details for selected event.' },
-      { status: 500 }
-    )
+      { status: 500 },
+    );
   } else {
     return response;
   }
