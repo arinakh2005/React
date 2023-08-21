@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { action as manipulateEventAction } from './components/EventForm';
+import NewsletterPage, { action as newsletterAction } from './components/Newsletter';
 import ErrorPage from './pages/Error/Error';
 import EditEventPage from './pages/Events/EditEvent';
 import EventDetailPage, { loader as eventDetailLoader, action as deleteEventAction } from './pages/Events/EventDetail';
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
           { path: 'new', element: <NewEventPage />, action: manipulateEventAction },
         ],
       },
+      { path: 'newsletter', element: <NewsletterPage />, action: newsletterAction },
     ],
   },
 ]);
