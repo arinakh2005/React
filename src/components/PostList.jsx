@@ -23,9 +23,17 @@ function PostList({ isPosting, onStopPosting }) {
   return (
     <>
       {modalContent}
-      <ul className={classes.posts}>
-        <Post author="Manuel" body="Check out the full course!" />
-      </ul>
+      {posts.length &&
+        <ul className={classes.posts}>
+          {posts.map((post) => <Post key={post.body} author={post.author} body={post.body} />)}
+        </ul>
+      }
+      {!posts.length &&
+        <div style={{ textAlign: 'center', color: 'white' }}>
+          <h2>There are no posts yet.</h2>
+          <p>Start adding some!</p>
+        </div>
+      }
     </>
   );
 }
